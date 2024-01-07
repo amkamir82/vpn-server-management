@@ -15,3 +15,10 @@ def init_ssh_client():
     client.connect(hostname, username=username, pkey=my_key)
     return client
 
+
+def scp_files_to_server(ssh_client):
+    files = [config.V2RAY_CONFIG_FILE_PATH, config.DOCKER_COMPOSE_FILE_PATH]
+    remote_path = "/root/"
+    with SCPClient(client.get_transport()) as scp:
+        for file in files:
+            scp.put(file, remote_path)
