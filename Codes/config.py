@@ -1,0 +1,6 @@
+HOSTNAME = "your server hostname"
+USERNAME = "your server user"
+PASSWORD = "your server password if you used password for ssh"
+PRIVATE_KEY_PATH = "path to your ssh private key (.ssh/id_rsa) if you use ssh key for ssh"
+V2RAY_CONFIG_FILE_PATH = "config.json"
+DOCKER_COMPOSE_FILE_PATH = "docker-compose.yaml"
